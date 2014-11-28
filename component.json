@@ -1,0 +1,26 @@
+{
+  "name": "emoji-emotion",
+  "version": "0.0.1",
+  "description": "List of emoji rated for valence in JSON",
+  "license": "MIT",
+  "keywords": [
+    "gemoji",
+    "emoji",
+    "unicode",
+    "word",
+    "list",
+    "sentiment",
+    "analysis",
+    "opinion",
+    "mining",
+    "text",
+    "microblogs"
+  ],
+  "repository": "wooorm/emoji-emotion",
+  "scripts" : [
+    "index.js"
+  ],
+  "json": [
+    "data/emoji-emotion.json"
+  ]
+}

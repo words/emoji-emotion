@@ -1,0 +1,48 @@
+{
+  "name": "emoji-emotion",
+  "version": "0.0.1",
+  "description": "List of emoji rated for valence in JSON",
+  "license": "MIT",
+  "keywords": [
+    "gemoji",
+    "emoji",
+    "unicode",
+    "word",
+    "list",
+    "sentiment",
+    "analysis",
+    "opinion",
+    "mining",
+    "text",
+    "microblogs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/emoji-emotion.git"
+  },
+  "author": "Titus Wormer <tituswormer@gmail.com>",
+  "devDependencies": {
+    "eslint": "^0.10.0",
+    "gemoji": "^0.2.0",
+    "istanbul": "^0.3.0",
+    "jscs": "^1.0.0",
+    "markdown-table": "^0.1.0",
+    "mocha": "^2.0.0",
+    "plain-text-data-to-json": "^0.1.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/_mocha --reporter spec --check-leaks -u exports test.js",
+    "test-travis": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- --reporter spec --check-leaks -u exports test.js",
+    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -- test.js",
+    "lint-api": "node_modules/.bin/eslint index.js",
+    "lint-test": "node_modules/.bin/eslint test.js --env mocha",
+    "lint-script": "node_modules/.bin/eslint script/build-data.js script/build-support.js",
+    "lint-style": "node_modules/.bin/jscs index.js script/build-data.js script/build-support.js test.js --reporter=inline",
+    "lint": "npm run lint-api && npm run lint-test && npm run lint-style",
+    "make": "npm run lint && npm run coverage",
+    "build-data": "node script/build-data.js",
+    "build-support": "node script/build-support.js",
+    "build": "npm run build-data && npm run build-support",
+    "prepublish": "npm run build"
+  }
+}

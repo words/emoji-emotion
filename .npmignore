@@ -1,0 +1,14 @@
+.*
+*.log
+*.txt
+bower_components/
+build/
+components/
+coverage/
+node_modules/
+script/
+test.js
+bower.json
+component.json
+History.md
+Support.md
