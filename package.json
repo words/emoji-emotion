@@ -26,7 +26,7 @@
     "gemoji": "^0.2.0",
     "istanbul": "^0.3.0",
     "jscs": "^1.0.0",
-    "markdown-table": "^0.1.0",
+    "markdown-table": "^0.2.0",
     "mocha": "^2.0.0",
     "plain-text-data-to-json": "^0.1.0"
   },
