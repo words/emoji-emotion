@@ -61,4 +61,4 @@ No images are included in this repository—the copyrighted material may or may 
 
 ## License
 
-MIT © [Titus Wormer](http://wooorm.com)
+[MIT](LICENSE) © [Titus Wormer](http://wooorm.com)
