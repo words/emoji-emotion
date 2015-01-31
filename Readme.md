@@ -41,8 +41,7 @@ UMD (globals/AMD/CommonJS) ([uncompressed](emoji-emotion.js) and [compressed](em
 
 ```javascript
 var emotion = require('emoji-emotion');
-
-emotion[0];
+var emoji = emotion[0];
 ```
 
 Yields:
