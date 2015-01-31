@@ -30,6 +30,8 @@
     "jscs": "^1.0.0",
     "jscs-jsdoc": "^0.4.0",
     "markdown-table": "^0.3.0",
+    "mdast": "^0.1.0",
+    "mdast-usage": "^0.1.0",
     "mocha": "^2.0.0",
     "plain-text-data-to-json": "^0.1.0"
   },
