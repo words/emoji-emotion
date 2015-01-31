@@ -10,6 +10,7 @@ script/
 build.js
 emoji-emotion.js
 emoji-emotion.min.js
+example.js
 test.js
 bower.json
 component.json
