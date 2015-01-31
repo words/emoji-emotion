@@ -22,6 +22,12 @@ $ component install wooorm/emoji-emotion
 $ bower install emoji-emotion
 ```
 
+[Duo](http://duojs.org/#getting-started):
+
+```javascript
+var emotion = require('wooorm/emoji-emotion');
+```
+
 ## Usage
 
 ```javascript
