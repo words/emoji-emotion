@@ -4,19 +4,19 @@ List of emoji rated for valence with an integer between minus five (negative) an
 
 ## Installation
 
-npm:
+[npm](https://docs.npmjs.com/cli/install):
 
 ```bash
 $ npm install emoji-emotion
 ```
 
-Component:
+[Bower](http://bower.io/#install-packages):
 
 ```bash
 $ component install wooorm/emoji-emotion
 ```
 
-Bower:
+[Component.js](https://github.com/componentjs/component):
 
 ```bash
 $ bower install emoji-emotion
