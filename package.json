@@ -45,7 +45,8 @@
     "make": "npm run lint && npm run coverage",
     "build-data": "node script/build-data.js",
     "build-support": "node script/build-support.js",
-    "build": "npm run build-data && npm run build-support",
+    "bundle": "browserify index.js -s emojiEmotion > emoji-emotion.js",
+    "build": "npm run build-data && npm run bundle && npm run build-support",
     "prepublish": "npm run build"
   }
 }
