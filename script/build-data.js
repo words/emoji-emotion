@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Dependencies.
  */
 
@@ -12,7 +12,7 @@ fs = require('fs');
 gemoji = require('gemoji');
 toJSON = require('plain-text-data-to-json');
 
-/**
+/*
  * Cached access.
  */
 
@@ -22,7 +22,7 @@ var read,
 write = fs.writeFileSync;
 read = fs.readFileSync;
 
-/**
+/*
  * Data.
  */
 
@@ -30,7 +30,7 @@ var faces;
 
 faces = toJSON(read('./data/faces.txt', 'utf-8'));
 
-/**
+/*
  * Manipulate.
  */
 
@@ -42,7 +42,7 @@ faces = Object.keys(faces).sort().map(function (name) {
     }
 });
 
-/**
+/*
  * Apply interpolation because emoticons represent more
  * emotion that words.
  */
@@ -58,10 +58,26 @@ max = Math.max.apply(Math, faces.map(function (face) {
     return face.polarity;
 }));
 
-function interpolate(weigth, a, b) {
-    return a + weigth * (b - a);
+/**
+ * Linear interpolation
+ *
+ * @param {number} weight
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
+function interpolate(weight, a, b) {
+    return a + weight * (b - a);
 }
 
+/**
+ * Reverse function of `interpolate`.
+ *
+ * @param {number} value
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
 function reverseInterpolate(value, a, b) {
     return (value - a) / (b - a);
 }
@@ -72,7 +88,7 @@ faces.forEach(function (face) {
     ));
 });
 
-/**
+/*
  * Write
  */
 

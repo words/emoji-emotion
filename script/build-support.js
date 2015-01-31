@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Dependencies.
  */
 
@@ -18,16 +18,15 @@ gemoji = require('gemoji');
  * Escape a string into its unicode points.
  *
  * @param {string} value
- * @return {string} value
+ * @return {string}
  */
-
 function escape(value) {
     return value.split('').map(function (character) {
         return '\\u' + character.charCodeAt(0).toString(16);
     }).join('');
 }
 
-/**
+/*
  * Create an expression from all emoji.
  */
 
@@ -35,7 +34,7 @@ var expression;
 
 expression = new RegExp(Object.keys(gemoji.unicode).join('|'), 'g');
 
-/**
+/*
  * Set up data.
  */
 
@@ -61,7 +60,7 @@ data = [
     })
 );
 
-/**
+/*
  * Write support.
  */
 
@@ -76,7 +75,13 @@ fs.writeFileSync('Support.md',
     '\n' +
 
     table(data, {
-        'align': ['c', 'c', 'c', 'c'],
+        'align': 'c',
+        /**
+         * Calculate the visual length of text.
+         *
+         * @param {string} value
+         * @return {number}
+         */
         'stringLength': function (value) {
             return value.replace(expression, '  ').length;
         }
