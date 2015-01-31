@@ -24,6 +24,7 @@
   "devDependencies": {
     "browserify": "^8.0.0",
     "eslint": "^0.13.0",
+    "esmangle": "^1.0.0",
     "gemoji": "^0.2.0",
     "istanbul": "^0.3.0",
     "jscs": "^1.0.0",
