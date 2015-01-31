@@ -1,5 +1,5 @@
 
-n.n.n / 2015-01-31
+0.1.1 / 2015-01-31
 ==================
 
   * Add `build-usage` task to render `example.js` to `Readme.md`
