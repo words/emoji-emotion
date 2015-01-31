@@ -22,6 +22,7 @@
   },
   "author": "Titus Wormer <tituswormer@gmail.com>",
   "devDependencies": {
+    "browserify": "^8.0.0",
     "eslint": "^0.13.0",
     "gemoji": "^0.2.0",
     "istanbul": "^0.3.0",
