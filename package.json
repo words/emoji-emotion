@@ -46,6 +46,7 @@
     "build-data": "node script/build-data.js",
     "build-support": "node script/build-support.js",
     "bundle": "browserify index.js -s emojiEmotion > emoji-emotion.js",
+    "postbundle": "esmangle emoji-emotion.js > emoji-emotion.min.js",
     "build": "npm run build-data && npm run bundle && npm run build-support",
     "prepublish": "npm run build"
   }
