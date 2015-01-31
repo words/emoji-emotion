@@ -5,23 +5,26 @@ List of emoji rated for valence with an integer between minus five (negative) an
 ## Installation
 
 npm:
-```sh
+
+```bash
 $ npm install emoji-emotion
 ```
 
 Component:
-```sh
+
+```bash
 $ component install wooorm/emoji-emotion
 ```
 
 Bower:
-```sh
+
+```bash
 $ bower install emoji-emotion
 ```
 
 ## Usage
 
-```js
+```javascript
 var emotion = require('emoji-emotion');
 
 emotion[0];
