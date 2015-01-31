@@ -8,6 +8,8 @@ coverage/
 node_modules/
 script/
 build.js
+emoji-emotion.js
+emoji-emotion.min.js
 test.js
 bower.json
 component.json
