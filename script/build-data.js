@@ -39,7 +39,7 @@ faces = Object.keys(faces).sort().map(function (name) {
         'name': name,
         'emoji': gemoji.name[name].emoji,
         'polarity': faces[name]
-    }
+    };
 });
 
 /*

@@ -56,7 +56,7 @@ data = [
             gemoji.unicode[emotion.emoji].names.join('; '),
             escape(emotion.emoji),
             emotion.polarity
-        ]
+        ];
     })
 );
 
