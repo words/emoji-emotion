@@ -28,6 +28,15 @@ $ bower install emoji-emotion
 var emotion = require('wooorm/emoji-emotion');
 ```
 
+UMD (globals/AMD/CommonJS) ([uncompressed](emoji-emotion.js) and [compressed](emoji-emotion.min.js)):
+
+```html
+<script src="path/to/emoji-emotion.js"></script>
+<script>
+  emojiEmotion[0] // { "emoji": "😠", "polarity": -4 }
+</script>
+```
+
 ## Usage
 
 ```javascript
