@@ -1,100 +1,55 @@
+/**
+ * @author Titus Wormer
+ * @copyright 2015 Titus Wormer
+ * @license MIT
+ * @module emoji-emotion:script:data
+ * @fileoverview Transform data.
+ */
+
 'use strict';
 
-/*
- * Dependencies.
- */
+/* Dependencies. */
+var fs = require('fs');
+var path = require('path');
+var gemoji = require('gemoji');
+var toJSON = require('plain-text-data-to-json');
 
-var fs,
-    gemoji,
-    toJSON;
+/* Read. */
+var faces = toJSON(fs.readFileSync('faces.txt', 'utf8'));
 
-fs = require('fs');
-gemoji = require('gemoji');
-toJSON = require('plain-text-data-to-json');
-
-/*
- * Cached access.
- */
-
-var read,
-    write;
-
-write = fs.writeFileSync;
-read = fs.readFileSync;
-
-/*
- * Data.
- */
-
-var faces;
-
-faces = toJSON(read('./data/faces.txt', 'utf-8'));
-
-/*
- * Manipulate.
- */
-
+/* Manipulate. */
 faces = Object.keys(faces).sort().map(function (name) {
-    return {
-        'name': name,
-        'emoji': gemoji.name[name].emoji,
-        'polarity': faces[name]
-    };
+  return {
+    name: name,
+    emoji: gemoji.name[name].emoji,
+    polarity: faces[name]
+  };
 });
 
-/*
- * Apply interpolation because emoticons represent more
- * emotion that words.
- */
-
-var min,
-    max;
-
-min = Math.min.apply(Math, faces.map(function (face) {
-    return face.polarity;
+/* Apply interpolation because emoticons represent more
+ * emotion that words. */
+var min = Math.min.apply(Math, faces.map(function (face) {
+  return face.polarity;
 }));
 
-max = Math.max.apply(Math, faces.map(function (face) {
-    return face.polarity;
+var max = Math.max.apply(Math, faces.map(function (face) {
+  return face.polarity;
 }));
 
-/**
- * Linear interpolation
- *
- * @param {number} weight
- * @param {number} a
- * @param {number} b
- * @return {number}
- */
+/* Write. */
+var doc = JSON.stringify(faces.map(function (face) {
+  var polarity = reverse(face.polarity, min, max);
+  polarity = interpolate(polarity, -5, 5);
+  return {emoji: face.emoji, polarity: Math.round(polarity)};
+}), null, 2) + '\n';
+
+/* Write the dictionary. */
+fs.writeFileSync(path.join('index.json'), doc);
+
 function interpolate(weight, a, b) {
-    return a + weight * (b - a);
+  return a + (weight * (b - a));
 }
 
-/**
- * Reverse function of `interpolate`.
- *
- * @param {number} value
- * @param {number} a
- * @param {number} b
- * @return {number}
- */
-function reverseInterpolate(value, a, b) {
-    return (value - a) / (b - a);
+function reverse(value, a, b) {
+  return (value - a) / (b - a);
 }
-
-faces.forEach(function (face) {
-    face.polarity = Math.round(interpolate(
-        reverseInterpolate(face.polarity, min, max), -5, 5
-    ));
-});
-
-/*
- * Write
- */
-
-write('./data/emoji-emotion.json', JSON.stringify(faces.map(function (face) {
-    return {
-        'emoji': face.emoji,
-        'polarity': face.polarity
-    };
-}), null, 2) + '\n');

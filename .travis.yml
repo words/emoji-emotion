@@ -1,13 +1,24 @@
 language: node_js
-script: npm run-script test-travis
 node_js:
-- '0.10'
 - '0.11'
-after_script: npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls
+- '5.0'
+- '6.0'
+sudo: false
+after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
-  provider: npm
-  email: tituswormer@gmail.com
-  api_key:
-    secure: dqPIzlEd9FsBSlS85023IjmOpSAqeXnFfLACO0GX2wsfHxRUdxZNgArFDr+R7tnoFIthdxe+GWd/06eWD/jUTuXdBuiaDSscnOdZFojzMUef6G0upRsJZYmsjFDfics3b5gkRo5CSbUwStn544CbZka0OCeFYZifpnnTivoq7RM=
-  on:
-    repo: wooorm/emoji-emotion
+  - provider: npm
+    email: tituswormer@gmail.com
+    api_key:
+      secure: Oed5lkPYGbY665vS0Nx9x2m7lFuYwQYE6inp9lhZCmpYBWECvCVSPD5ziOK/Ln8JyIb8pjHCjWyMKH5se6oImPoWicQGUb13mqanBfi+9cusdEDV9hIcueXl8oqVcsdkhVEBrg02EFu7pq6qeuFmNZsb9jcb9U7FbgdHK9aHGbQ=
+    on:
+      tags: true
+      node: '5.0'
+  - provider: releases
+    api_key:
+      secure: UzWO1KEawjvCrzAtKUw5twHpPui8/WLZkDK22BnApouFSKkzjB4ZtSYTxn+6wZt0+9D0vZPmCRKQalKUl1aKbd+rwUMOCi+FM8rABkqd6jdB9rU1MDQUj+olvlYC8laFnxAG2OLdG+RVwxlnuMYg2kPXi1qV6b+aw6NhDCNSwAo=
+    file:
+      - "emoji-emotion.js"
+      - "emoji-emotion.min.js"
+    on:
+      tags: true
+      node: '6.0'
