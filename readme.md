@@ -1,4 +1,4 @@
-# emoji-emotion [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# emoji-emotion [![Build Status][travis-badge]][travis]
 
 List of emoji rated for valence with an integer between minus five
 (negative) and plus five (positive).
@@ -60,10 +60,6 @@ may or may not be available on the users computer.
 [travis-badge]: https://img.shields.io/travis/wooorm/emoji-emotion.svg
 
 [travis]: https://travis-ci.org/wooorm/emoji-emotion
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/emoji-emotion.svg
-
-[codecov]: https://codecov.io/github/wooorm/emoji-emotion
 
 [npm]: https://docs.npmjs.com/cli/install
 

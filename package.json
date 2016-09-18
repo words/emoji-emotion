@@ -31,7 +31,6 @@
     "esmangle": "^1.0.0",
     "gemoji": "^2.0.1",
     "markdown-table": "^1.0.0",
-    "nyc": "^8.3.0",
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^2.0.0",
     "remark-preset-wooorm": "^1.0.0",
@@ -48,14 +47,7 @@
     "build": "npm run build-data && npm run build-support && npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
     "test-api": "node test",
-    "test-coverage": "nyc --reporter lcov tape test.js",
-    "test": "npm run build && npm run lint && npm run test-coverage"
-  },
-  "nyc": {
-    "check-coverage": true,
-    "lines": 100,
-    "functions": 100,
-    "branches": 100
+    "test": "npm run build && npm run lint && npm run test-api"
   },
   "xo": {
     "space": true,
