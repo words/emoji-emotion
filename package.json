@@ -30,12 +30,14 @@
     "browserify": "^13.0.0",
     "esmangle": "^1.0.0",
     "gemoji": "^2.0.1",
+    "lerp": "^1.0.3",
     "markdown-table": "^1.0.0",
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^2.0.0",
     "remark-preset-wooorm": "^1.0.0",
     "string-width": "^1.0.1",
     "tape": "^4.6.0",
+    "unlerp": "^1.0.1",
     "xo": "^0.17.0"
   },
   "scripts": {
