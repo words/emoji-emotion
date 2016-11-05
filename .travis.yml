@@ -1,8 +1,7 @@
 language: node_js
 node_js:
-- '0.11'
-- '5.0'
-- '6.0'
+- '4.0'
+- '7.0'
 sudo: false
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
@@ -12,7 +11,7 @@ deploy:
       secure: Oed5lkPYGbY665vS0Nx9x2m7lFuYwQYE6inp9lhZCmpYBWECvCVSPD5ziOK/Ln8JyIb8pjHCjWyMKH5se6oImPoWicQGUb13mqanBfi+9cusdEDV9hIcueXl8oqVcsdkhVEBrg02EFu7pq6qeuFmNZsb9jcb9U7FbgdHK9aHGbQ=
     on:
       tags: true
-      node: '5.0'
+      node: '4.0'
   - provider: releases
     api_key:
       secure: UzWO1KEawjvCrzAtKUw5twHpPui8/WLZkDK22BnApouFSKkzjB4ZtSYTxn+6wZt0+9D0vZPmCRKQalKUl1aKbd+rwUMOCi+FM8rABkqd6jdB9rU1MDQUj+olvlYC8laFnxAG2OLdG+RVwxlnuMYg2kPXi1qV6b+aw6NhDCNSwAo=
@@ -21,4 +20,4 @@ deploy:
       - "emoji-emotion.min.js"
     on:
       tags: true
-      node: '6.0'
+      node: '7.0'
