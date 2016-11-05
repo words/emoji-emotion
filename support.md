@@ -8,7 +8,7 @@ to make sense of the first column!
 | :---: | :--------------------------: | :-------------: | :------: |
 |   👿   |              imp             |   \ud83d\udc7f  |    -5    |
 |   😾   |          pouting_cat         |   \ud83d\ude3e  |    -5    |
-|   😡   |             rage             |   \ud83d\ude21  |    -5    |
+|   😡   |          rage; pout          |   \ud83d\ude21  |    -5    |
 |   😠   |             angry            |   \ud83d\ude20  |    -4    |
 |   😧   |           anguished          |   \ud83d\ude27  |    -4    |
 |   😭   |              sob             |   \ud83d\ude2d  |    -4    |
