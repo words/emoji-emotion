@@ -35,7 +35,7 @@
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^2.0.0",
     "remark-preset-wooorm": "^1.0.0",
-    "string-width": "^1.0.1",
+    "string-width": "^2.0.0",
     "tape": "^4.6.0",
     "unlerp": "^1.0.1",
     "xo": "^0.17.0"
