@@ -1,11 +1,3 @@
-/**
- * @author Titus Wormer
- * @copyright 2015 Titus Wormer
- * @license MIT
- * @module emoji-emotion:script:data
- * @fileoverview Transform data.
- */
-
 'use strict';
 
 /* Dependencies. */
