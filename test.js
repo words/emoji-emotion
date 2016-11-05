@@ -1,42 +1,28 @@
-/**
- * @author Titus Wormer
- * @copyright 2014-2015 Titus Wormer
- * @license MIT
- * @module emoji-emotion
- * @fileoverview Test suite for `emoji-emotion`.
- */
-
 'use strict';
 
-/* Dependencies. */
+var assert = require('assert');
 var test = require('tape');
 var emojiEmotion = require('./');
 
-/* Tests for basic structure. */
 test('emoji-emotion', function (t) {
   t.ok(Array.isArray(emojiEmotion));
-  t.end();
-});
 
-test('emoji-emotion[n]', function (t) {
-  t.test('should have an `emoji` string field', function (st) {
+  t.doesNotThrow(function () {
     emojiEmotion.forEach(function (emotion) {
-      st.equal(typeof emotion.emoji, 'string');
+      assert.equal(typeof emotion.emoji, 'string', JSON.stringify(emotion));
     });
+  }, 'each entry should have an `emoji` string field');
 
-    st.end();
-  });
-
-  t.test('should have an `polarity` integer field', function (st) {
+  t.doesNotThrow(function () {
     emojiEmotion.forEach(function (emotion) {
-      st.equal(typeof emotion.polarity, 'number');
-      st.equal(Math.round(emotion.polarity), emotion.polarity);
-      st.ok(emotion.polarity >= -5);
-      st.ok(emotion.polarity <= 5);
-    });
+      var label = JSON.stringify(emotion);
 
-    st.end();
-  });
+      assert.equal(typeof emotion.polarity, 'number', 'number: ' + label);
+      assert.equal(Math.round(emotion.polarity), emotion.polarity, 'integer: ' + label);
+      assert.ok(emotion.polarity >= -5, 'gte -5: ' + label);
+      assert.ok(emotion.polarity <= 5, 'lte 5: ' + label);
+    });
+  }, 'each entry should have an `polarity` integer field');
 
   t.end();
 });
