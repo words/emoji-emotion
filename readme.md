@@ -27,7 +27,7 @@ Yields:
 }
 ```
 
-Note the information is intentionally limit.  Check out [`gemoji`][gemoji]
+Note the information is intentionally limited.  Check out [`gemoji`][gemoji]
 for more information, such as tags, descriptions, and names regarding
 these faces.
 
