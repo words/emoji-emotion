@@ -29,7 +29,7 @@
   "devDependencies": {
     "browserify": "^13.0.0",
     "esmangle": "^1.0.0",
-    "gemoji": "^3.0.0",
+    "gemoji": "^4.0.0",
     "lerp": "^1.0.3",
     "markdown-table": "^1.0.0",
     "plain-text-data-to-json": "^1.0.0",
