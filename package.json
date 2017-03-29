@@ -34,9 +34,9 @@
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^3.0.0",
     "remark-preset-wooorm": "^2.0.0",
-    "string-width": "^1.0.1",
+    "string-width": "^2.0.0",
     "tape": "^4.6.0",
-    "xo": "^0.17.0"
+    "xo": "^0.18.1"
   },
   "scripts": {
     "build-md": "remark readme.md -qfo",
@@ -51,6 +51,7 @@
   },
   "xo": {
     "space": true,
+    "esnext": false,
     "ignores": [
       "emoji-emotion.js"
     ]
