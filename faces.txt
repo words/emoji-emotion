@@ -87,7 +87,7 @@ persevere: -2
 % `cry` receives an AFINN score of `-1`, `crying`
 % receives `-2`. As the emoji is arguably in the middle
 % of crying, `cry` receives `crying`s `-2`.
-% cry: -2
+cry: -2
 
 % `joy` receives an AFINN score of `3`.
 joy: 3
