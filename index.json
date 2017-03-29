@@ -1,270 +1,337 @@
 [
   {
+    "name": "angry",
     "emoji": "😠",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "anguished",
     "emoji": "😧",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "astonished",
     "emoji": "😲",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "blush",
     "emoji": "😊",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "cold_sweat",
     "emoji": "😰",
     "polarity": -2
   },
   {
+    "name": "confounded",
     "emoji": "😖",
     "polarity": -2
   },
   {
+    "name": "confused",
     "emoji": "😕",
     "polarity": -2
   },
   {
+    "name": "cry",
     "emoji": "😢",
     "polarity": -2
   },
   {
+    "name": "crying_cat_face",
     "emoji": "😿",
     "polarity": -2
   },
   {
+    "name": "disappointed",
     "emoji": "😞",
     "polarity": -2
   },
   {
+    "name": "disappointed_relieved",
     "emoji": "😥",
     "polarity": -1
   },
   {
+    "name": "dizzy_face",
     "emoji": "😵",
     "polarity": -1
   },
   {
+    "name": "expressionless",
     "emoji": "😑",
     "polarity": 0
   },
   {
+    "name": "fearful",
     "emoji": "😨",
     "polarity": -2
   },
   {
+    "name": "flushed",
     "emoji": "😳",
     "polarity": -2
   },
   {
+    "name": "frowning",
     "emoji": "😦",
     "polarity": -1
   },
   {
+    "name": "grimacing",
     "emoji": "😬",
     "polarity": -2
   },
   {
+    "name": "grin",
     "emoji": "😁",
     "polarity": -1
   },
   {
+    "name": "grinning",
     "emoji": "😀",
+    "polarity": 2
+  },
+  {
+    "name": "heart_eyes",
+    "emoji": "😍",
     "polarity": 3
   },
   {
-    "emoji": "😍",
-    "polarity": 4
-  },
-  {
+    "name": "heart_eyes_cat",
     "emoji": "😻",
-    "polarity": 4
+    "polarity": 3
   },
   {
+    "name": "hushed",
     "emoji": "😯",
     "polarity": -1
   },
   {
+    "name": "imp",
     "emoji": "👿",
-    "polarity": -5
+    "polarity": -4
   },
   {
+    "name": "innocent",
     "emoji": "😇",
-    "polarity": 4
+    "polarity": 3
   },
   {
+    "name": "joy",
     "emoji": "😂",
-    "polarity": 4
+    "polarity": 3
   },
   {
+    "name": "joy_cat",
     "emoji": "😹",
-    "polarity": 4
+    "polarity": 3
   },
   {
+    "name": "kissing",
     "emoji": "😗",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "kissing_cat",
     "emoji": "😽",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "kissing_closed_eyes",
     "emoji": "😚",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "kissing_heart",
     "emoji": "😘",
-    "polarity": 4
-  },
-  {
-    "emoji": "😙",
     "polarity": 3
   },
   {
+    "name": "kissing_smiling_eyes",
+    "emoji": "😙",
+    "polarity": 2
+  },
+  {
+    "name": "laughing",
     "emoji": "😆",
     "polarity": 1
   },
   {
+    "name": "mask",
     "emoji": "😷",
     "polarity": -1
   },
   {
+    "name": "neutral_face",
     "emoji": "😐",
     "polarity": 0
   },
   {
+    "name": "no_mouth",
     "emoji": "😶",
     "polarity": 0
   },
   {
+    "name": "open_mouth",
     "emoji": "😮",
     "polarity": -2
   },
   {
+    "name": "pensive",
     "emoji": "😔",
     "polarity": -1
   },
   {
+    "name": "persevere",
     "emoji": "😣",
     "polarity": -2
   },
   {
+    "name": "pouting_cat",
     "emoji": "😾",
-    "polarity": -5
+    "polarity": -4
   },
   {
+    "name": "rage",
     "emoji": "😡",
-    "polarity": -5
+    "polarity": -4
   },
   {
+    "name": "relaxed",
     "emoji": "☺️",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "relieved",
     "emoji": "😌",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "scream",
     "emoji": "😱",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "scream_cat",
     "emoji": "🙀",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "sleeping",
     "emoji": "😴",
     "polarity": 0
   },
   {
+    "name": "sleepy",
     "emoji": "😪",
     "polarity": 0
   },
   {
+    "name": "smile",
     "emoji": "😄",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "smile_cat",
     "emoji": "😸",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "smiley",
     "emoji": "😃",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "smiley_cat",
     "emoji": "😺",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "smiling_imp",
     "emoji": "😈",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "smirk",
     "emoji": "😏",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "smirk_cat",
     "emoji": "😼",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "sob",
     "emoji": "😭",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "stuck_out_tongue",
     "emoji": "😛",
     "polarity": 1
   },
   {
+    "name": "stuck_out_tongue_closed_eyes",
     "emoji": "😝",
     "polarity": 0
   },
   {
+    "name": "stuck_out_tongue_winking_eye",
     "emoji": "😜",
     "polarity": -1
   },
   {
+    "name": "sunglasses",
     "emoji": "😎",
     "polarity": 1
   },
   {
+    "name": "sweat",
     "emoji": "😓",
     "polarity": -1
   },
   {
+    "name": "sweat_smile",
     "emoji": "😅",
-    "polarity": 3
+    "polarity": 2
   },
   {
+    "name": "tired_face",
     "emoji": "😫",
     "polarity": -2
   },
   {
+    "name": "triumph",
     "emoji": "😤",
     "polarity": 0
   },
   {
+    "name": "unamused",
     "emoji": "😒",
     "polarity": -2
   },
   {
+    "name": "weary",
     "emoji": "😩",
     "polarity": -2
   },
   {
+    "name": "wink",
     "emoji": "😉",
-    "polarity": 4
+    "polarity": 3
   },
   {
+    "name": "worried",
     "emoji": "😟",
-    "polarity": -4
+    "polarity": -3
   },
   {
+    "name": "yum",
     "emoji": "😋",
-    "polarity": 4
+    "polarity": 3
   }
 ]
