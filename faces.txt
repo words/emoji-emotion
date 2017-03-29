@@ -138,8 +138,11 @@ angry: -3
 % due to its exaggerated expression by vendors, a `-4`.
 rage: -4
 
-% `triumph` receives an AFINN score of `4`.
-triumph: 4
+% `triumph` receives an AFINN score of `4`. However,
+% it can be seen as angry and is sometimes just
+% called 'face with stream from nose', so it 
+% is given an average of `0`
+triumph: 0
 
 % On the verge of tears[2]. Therefore, equal to `cry`.
 confounded: -2
