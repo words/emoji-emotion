@@ -72,4 +72,4 @@ to make sense of the first column!
 |   😘   |         kissing_heart        |   \ud83d\ude18  |     4    |
 |   😉   |             wink             |   \ud83d\ude09  |     4    |
 |   😋   |              yum             |   \ud83d\ude0b  |     4    |
-|   😤   |            triumph           |   \ud83d\ude24  |     5    |
+|   😤   |            triumph           |   \ud83d\ude24  |     0    |
