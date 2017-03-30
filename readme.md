@@ -18,21 +18,22 @@ npm install emoji-emotion
 
 ```javascript
 var emotion = require('emoji-emotion');
-var emoji = emotion[0];
+
+console.log(emotion.slice(0, 5));
 ```
 
 Yields:
 
-```json
-{
-  "emoji": "😠",
-  "polarity": -4
-}
+```js
+[ { name: 'angry', emoji: '😠', polarity: -3 },
+  { name: 'anguished', emoji: '😧', polarity: -3 },
+  { name: 'astonished', emoji: '😲', polarity: 2 },
+  { name: 'blush', emoji: '😊', polarity: 2 },
+  { name: 'clown_face', emoji: '🤡', polarity: 0 } ]
 ```
 
-Note the information is intentionally limited.  Check out [`gemoji`][gemoji]
-for more information, such as tags, descriptions, and names regarding
-these faces.
+Note the information is intentionally limited.  Check out
+[`gemoji`][gemoji] for more info: tags, descriptions, names, etc.
 
 ## Support
 
@@ -42,7 +43,7 @@ See [support.md][support].
 
 The contained emoji are the faces and cats defined by [Unicode][].
 The polarity was hand classified (by one person) based on the names of
-these emoji (sometimes synonyms) and their [AFINN-111][] values.
+these emoji (sometimes synonyms) and their [AFINN-169][] values.
 Special care was given to **not** classify based on the images (as
 different vendors use different pictograms), but only on words and how
 they are used.
@@ -76,6 +77,6 @@ may or may not be available on the users computer.
 
 [unicode]: http://www.unicode.org/Public/emoji/1.0/full-emoji-list.html
 
-[afinn-111]: https://github.com/wooorm/afinn-111
+[afinn-169]: https://github.com/wooorm/afinn-169
 
 [strip-skin-tone]: https://github.com/wooorm/strip-skin-tone
