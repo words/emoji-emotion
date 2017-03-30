@@ -31,21 +31,20 @@
     "browserify": "^14.0.0",
     "esmangle": "^1.0.0",
     "gemoji": "^4.0.0",
-    "markdown-table": "^1.0.0",
+    "mdast-zone": "^3.0.0",
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^3.0.0",
     "remark-preset-wooorm": "^2.0.0",
-    "string-width": "^2.0.0",
     "tape": "^4.6.0",
+    "unist-builder": "^1.0.2",
     "xo": "^0.18.1"
   },
   "scripts": {
-    "build-md": "remark readme.md -qfo",
+    "build-md": "remark . -qfo",
     "build-data": "node script/build-data",
-    "build-support": "node script/build-support",
     "build-bundle": "browserify index.json --bare -s emojiEmotion > emoji-emotion.js",
     "build-mangle": "esmangle emoji-emotion.js > emoji-emotion.min.js",
-    "build": "npm run build-data && npm run build-support && npm run build-md && npm run build-bundle && npm run build-mangle",
+    "build": "npm run build-data && npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
     "test-api": "node test",
     "test": "npm run build && npm run lint && npm run test-api"
@@ -59,7 +58,8 @@
   },
   "remarkConfig": {
     "plugins": [
-      "preset-wooorm"
+      "preset-wooorm",
+      "./script/build-support"
     ]
   }
 }

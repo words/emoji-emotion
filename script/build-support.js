@@ -1,59 +1,46 @@
 'use strict';
 
-/* Dependencies. */
-var fs = require('fs');
-var table = require('markdown-table');
-var width = require('string-width');
+var zone = require('mdast-zone');
+var u = require('unist-builder');
 var sort = require('alphanum-sort/lib/compare');
-var gemoji = require('gemoji');
+var gemoji = require('gemoji').unicode;
 var emotion = require('..');
 
-/* Set up data. */
-var data = [[
-  'Emoji',
-  'Name(s)',
-  'Escaped Unicode',
-  'Polarity'
-]].concat(
-  emotion
-    .sort(function (a, b) {
-      var diff = a.polarity - b.polarity;
-      return diff || sort({}, gemoji.unicode[a.emoji].name, gemoji.unicode[b.emoji].name);
-    })
-    .map(function (emotion) {
-      return [
-        emotion.emoji,
-        gemoji.unicode[emotion.emoji].names.join('; '),
-        escape(emotion.emoji),
-        emotion.polarity
-      ];
-    })
-);
+module.exports = support;
 
-var doc = [
-  '# Support',
-  '',
-  '<!--lint disable table-pipe-alignment-->',
-  '',
-  'Note that this file does not contain the gemoji’s as rendered',
-  'by GitHub.  You need a browser capable of viewing unicode-emoji',
-  'to make sense of the first column!',
-  '',
-  table(data, {align: 'c', stringLength: width}),
-  ''
-].join('\n');
+function support() {
+  return transformer;
+}
 
-/* Write. */
-fs.writeFileSync('support.md', doc);
+function transformer(tree) {
+  zone(tree, 'support', replace);
+}
+function replace(start, nodes, end) {
+  console.log('repl!');
+  return [start, table(), end];
+}
 
-/**
- * Escape a string into its unicode points.
- *
- * @param {string} value - Value to encode.
- * @return {string}
- */
-function escape(value) {
-  return value.split('').map(function (character) {
-    return '\\u' + character.charCodeAt(0).toString(16);
-  }).join('');
+function table() {
+  var header = ['Emoji', 'Name(s)', 'Polarity'];
+
+  return u('table', {align: []}, [
+    u('tableRow', header.map(cell))
+  ].concat(
+    emotion
+      .sort(function (a, b) {
+        return a.polarity - b.polarity ||
+          sort({}, gemoji[a.emoji].name, gemoji[b.emoji].name);
+      })
+      .map(function (emotion) {
+        return u('tableRow', [
+          cell(emotion.emoji),
+          cell(gemoji[emotion.emoji].names.join('; ')),
+          cell(emotion.polarity)
+        ]);
+      })
+  ));
+}
+
+function cell(value) {
+  return u('tableCell', [u('text', value)]);
 }
