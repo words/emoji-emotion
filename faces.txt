@@ -8,6 +8,8 @@
 %%%%% [2]: For information regarding the names emoji's
 %%%%%      often go by: http://emojipedia.org/people/
 %%%%%
+%%%%% [3]: http://emojipedia.org/
+%%%%%
 
 % `smile` receives an AFINN score of `2`.
 smile: 2
@@ -65,7 +67,9 @@ flushed: -2
 % kept this mistake in place[2].
 % Therefore, this emoji is classified as a slightly
 % negative `-1`.
-grin: -1
+% EDIT: Apple has fixed this, and others' have too[3],
+% so I’m reclassifying as `2`.
+grin: 2
 
 % `pensive` receives an AFINN score of `-1`.
 pensive: -1
@@ -140,7 +144,7 @@ rage: -4
 
 % `triumph` receives an AFINN score of `4`. However,
 % it can be seen as angry and is sometimes just
-% called 'face with stream from nose', so it 
+% called 'face with stream from nose', so it
 % is given an average of `0`
 triumph: 0
 
@@ -219,6 +223,63 @@ smirk: 2
 
 % No emotion, thus `0`.
 expressionless: 0
+
+% Basically like `joy`, but even more enthusiastically.
+rofl: 4
+
+% `slightly_smiling_face`, a little less happy than `smile`.
+slightly_smiling_face: 1
+
+% `upside_down_face`: I have no clue... Sure it’s smiling... But...
+upside_down_face: 0
+
+% `money_mouth_face`: ???
+money_mouth_face: 0
+
+% `hugs` receives an AFINN score of `2`.
+hugs: 2
+
+% thesaurus.com gives `fool`, `weirdo` as synonyms, which both have an AFINN
+% rating of `-2`. However, this looks quite happy & cute, so I’ll be less
+% harsh.
+nerd_face: -1
+
+% Quite scary to some people (`fool: -2`), ok for others (comedy, comic: 1),
+% so I’ll keep it at `0` (neutral).
+clown_face: 0
+
+% Funky, this doesn’t indicate any valence in the Unicode spec, but all
+% vendors seem to put the cowboy hat on `smiley` (which gets a `+2`).
+cowboy_hat_face: 2
+
+% As `frowning` gets a `-1` (and I’m not going to add `-0.5`), I’ll give this
+% `-1` too. Sure, there’s a difference, but unless both Emoji appear next to
+% each other, that difference is subtile.
+slightly_frowning_face: -1
+
+% No AFINN matches for this, but it gets confusing appearances across vendors:
+% some are very positive, but some are quite fearful.
+drooling_face: 0
+
+% Quite negative & unamused, but less negative than `unamused`.
+roll_eyes: -1
+
+% Although thinking in general is positive (`engrossing: 3`, `engrossed: 1`)
+% this emoji is depicted more as “doubting”, and used when something is
+% “doubted” (`-1`).
+thinking: -1
+
+% Closest to “lied” (`-2`).
+lying_face: -2
+
+% Closest to `silencing` (`-1`)
+zipper_mouth_face: -1
+
+% Closest to `sick` (`-2`)
+nauseated_face: -2
+face_with_head_bandage: -2 % (`hurt`: `-2`)
+sneezing_face: -2 % Closest to `sneezing` (`-2`)
+face_with_thermometer: -1
 
 %%%%%
 %%%%% Cat faces:

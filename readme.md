@@ -3,6 +3,9 @@
 List of emoji rated for valence with an integer between minus five
 (negative) and plus five (positive).
 
+This list does not contain emoji modifiers (skin-tones).  Use something like
+[`strip-skin-tone`][strip-skin-tone] to remove them if you’d like.
+
 ## Installation
 
 [npm][]:
@@ -74,3 +77,5 @@ may or may not be available on the users computer.
 [unicode]: http://www.unicode.org/Public/emoji/1.0/full-emoji-list.html
 
 [afinn-111]: https://github.com/wooorm/afinn-111
+
+[strip-skin-tone]: https://github.com/wooorm/strip-skin-tone

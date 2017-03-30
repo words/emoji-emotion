@@ -27,6 +27,7 @@
     "index.json"
   ],
   "devDependencies": {
+    "alphanum-sort": "^1.0.2",
     "browserify": "^14.0.0",
     "esmangle": "^1.0.0",
     "gemoji": "^4.0.0",
@@ -57,6 +58,8 @@
     ]
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
