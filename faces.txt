@@ -298,3 +298,87 @@ scream_cat: -3
 crying_cat_face: -2
 joy_cat: 3
 pouting_cat: -4
+
+%%%%%
+%%%%% Non faces:
+%%%%%
+
+% Basically used as a nice way to say “shit” (`-4`) without actually saying
+% it, so it’s a bit softer.
+shit: -3
+
+% `ghost` (`-1`)
+ghost: -1
+
+% Skull isn’t listed, but the Gemoji tags dead (`-3`), danger (`-2`),
+% and poison (`-2`) are.
+skull: -2
+skull_and_crossbones: -2
+
+% Its Gemoji tag hooray isn’t listed, but some synonyms are: hurrah (`5`),
+% wow (`4`)
+raised_hands: 4
+
+% Clap isn’t listed, but the Gemoji tags praise (`3`) and applause (`2`) are.
+clap: 3
+
+% Pray (`1`), tags: please (`1`), hope (`2`), wish (`1`).
+pray: 1
+
+% Handshake isn’t listed. Tags: deal, not listed. Synonym: agree (`1`),
+% agreement (`1`).
+handshake: 1
+
+% Thumbs up isn’t listed, +1 isn’t listed. Tags: approved (`2`).
+thumbsup: 2
+
+% Thumbs down isn’t listed, -1 isn’t listed. Tags: disapprove (`-2`).
+thumbsdown: -2
+
+% Punch isn’t listed. Tags: attack (`-1`).
+punch: -1
+
+% Fist isn’t listed
+
+% crossed_fingers isn’t listed. Tags: luck (`3`), hopeful (`2`).
+crossed_fingers: 2
+
+% V isn’t listed. Tags: peace (`2`), victory (`3`).
+v: 2
+
+% Metal isn’t listed
+
+% OK isn’t listed. No tags. Synonyms: cool (`1`), fair (`2`).
+ok_hand: 2
+
+% Pointing finger left, up, right, down aren’t really sentimental.
+
+% middle_finger isn’t listed, fu isn’t listed. No tags. Synonyms: fuck (`-4`).
+fu: -4
+
+% Kiss is `2`.
+kiss: 2
+
+% Lips isn’t listed. Tags: kiss (`2`).
+lips: 2
+
+% Love is `3`.
+heart: 3
+yellow_heart: 3
+green_heart: 3
+blue_heart: 3
+purple_heart: 3
+black_heart: 3
+two_hearts: 3
+revolving_hearts: 3
+heartbeat: 3
+heartpulse: 3
+sparkling_heart: 3
+cupid: 3
+gift_heart: 3
+
+% Heartbroken is `-3`.
+broken_heart: -3
+
+% 100 isn’t listed. Tags: perfect (`3`).
+100: 3
