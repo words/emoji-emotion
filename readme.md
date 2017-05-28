@@ -22,11 +22,11 @@ console.log(emotion.slice(0, 5));
 Yields:
 
 ```js
-[ { name: 'angry', emoji: '😠', polarity: -3 },
+[ { name: '100', emoji: '💯', polarity: 3 },
+  { name: 'angry', emoji: '😠', polarity: -3 },
   { name: 'anguished', emoji: '😧', polarity: -3 },
   { name: 'astonished', emoji: '😲', polarity: 2 },
-  { name: 'blush', emoji: '😊', polarity: 2 },
-  { name: 'clown_face', emoji: '🤡', polarity: 0 } ]
+  { name: 'black_heart', emoji: '🖤', polarity: 3 } ]
 ```
 
 Note the information is intentionally limited.  Check out
