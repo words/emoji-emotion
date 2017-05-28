@@ -15,8 +15,8 @@ function support() {
 function transformer(tree) {
   zone(tree, 'support', replace);
 }
+
 function replace(start, nodes, end) {
-  console.log('repl!');
   return [start, table(), end];
 }
 
