@@ -8,6 +8,8 @@ var toJSON = require('plain-text-data-to-json');
 
 /* Read. */
 var faces = toJSON(fs.readFileSync('faces.txt', 'utf8'));
+var all = [];
+var unclassified = ['🤖'];
 
 /* Manipulate. */
 faces = Object.keys(faces).sort().map(function (name) {
@@ -21,11 +23,30 @@ faces = Object.keys(faces).sort().map(function (name) {
     console.log('Invalid gemoji %s', name);
   }
 
+  all.push(gemoji[name].emoji);
+
   return {
     name: name,
     emoji: gemoji[name].emoji,
     polarity: num
   };
+});
+
+Object.keys(gemoji).forEach(function (name) {
+  var info = gemoji[name];
+  var emoji = info.emoji;
+
+  if (info.category !== 'people') {
+    return;
+  }
+
+  if (!/\bface\b/.test(info.description)) {
+    return;
+  }
+
+  if (all.indexOf(emoji) === -1 && unclassified.indexOf(emoji) === -1) {
+    throw new Error('Missing definition for ' + emoji + ' (' + info.description + ')');
+  }
 });
 
 /* Write. */
