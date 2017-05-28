@@ -105,6 +105,11 @@
     "polarity": -1
   },
   {
+    "name": "frowning_face",
+    "emoji": "☹️",
+    "polarity": -2
+  },
+  {
     "name": "grimacing",
     "emoji": "😬",
     "polarity": -2

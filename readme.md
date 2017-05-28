@@ -73,6 +73,7 @@ may or may not be available on the users computer.
 | 🤕    | face_with_head_bandage       | -2       |
 | 😨    | fearful                      | -2       |
 | 😳    | flushed                      | -2       |
+| ☹️    | frowning_face                | -2       |
 | 😬    | grimacing                    | -2       |
 | 🤥    | lying_face                   | -2       |
 | 🤢    | nauseated_face               | -2       |

@@ -256,6 +256,7 @@ cowboy_hat_face: 2
 % `-1` too. Sure, there’s a difference, but unless both Emoji appear next to
 % each other, that difference is subtile.
 slightly_frowning_face: -1
+frowning_face: -2
 
 % No AFINN matches for this, but it gets confusing appearances across vendors:
 % some are very positive, but some are quite fearful.
