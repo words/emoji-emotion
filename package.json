@@ -34,7 +34,7 @@
     "mdast-zone": "^3.0.0",
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^3.0.0",
-    "remark-preset-wooorm": "^2.0.0",
+    "remark-preset-wooorm": "^3.0.0",
     "tape": "^4.6.0",
     "unist-builder": "^1.0.2",
     "xo": "^0.18.1"
