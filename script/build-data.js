@@ -1,17 +1,14 @@
 'use strict';
 
-/* Dependencies. */
 var fs = require('fs');
 var path = require('path');
 var gemoji = require('gemoji').name;
 var toJSON = require('plain-text-data-to-json');
 
-/* Read. */
 var faces = toJSON(fs.readFileSync('faces.txt', 'utf8'));
 var all = [];
 var unclassified = ['🤖'];
 
-/* Manipulate. */
 faces = Object.keys(faces).sort().map(function (name) {
   var num = Number(faces[name]);
 
@@ -49,8 +46,7 @@ Object.keys(gemoji).forEach(function (name) {
   }
 });
 
-/* Write. */
-var doc = JSON.stringify(faces, null, 2) + '\n';
-
-/* Write the dictionary. */
-fs.writeFileSync(path.join('index.json'), doc);
+fs.writeFileSync(
+  path.join('index.json'),
+  JSON.stringify(faces, null, 2) + '\n'
+);
