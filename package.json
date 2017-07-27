@@ -16,16 +16,18 @@
     "text",
     "microblogs"
   ],
-  "repository": "https://github.com/wooorm/emoji-emotion",
+  "repository": "wooorm/emoji-emotion",
   "bugs": "https://github.com/wooorm/emoji-emotion/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+    "Christopher Freeley <freeley.c@husky.neu.edu>"
   ],
   "main": "index.json",
   "files": [
     "index.json"
   ],
+  "dependencies": {},
   "devDependencies": {
     "alphanum-sort": "^1.0.2",
     "browserify": "^14.0.0",
@@ -34,7 +36,6 @@
     "mdast-zone": "^3.0.0",
     "plain-text-data-to-json": "^1.0.0",
     "remark-cli": "^4.0.0",
-    "remark-lint-table-pipe-alignment": "^1.0.0",
     "remark-preset-wooorm": "^3.0.0",
     "tape": "^4.6.0",
     "unist-builder": "^1.0.2",
@@ -63,10 +64,6 @@
     },
     "plugins": [
       "preset-wooorm",
-      [
-        "remark-lint-table-pipe-alignment",
-        false
-      ],
       "./script/build-support"
     ]
   }
