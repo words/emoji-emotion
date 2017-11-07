@@ -181,9 +181,9 @@ may or may not be available on the users computer.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/emoji-emotion.svg
+[travis-badge]: https://img.shields.io/travis/words/emoji-emotion.svg
 
-[travis]: https://travis-ci.org/wooorm/emoji-emotion
+[travis]: https://travis-ci.org/words/emoji-emotion
 
 [npm]: https://docs.npmjs.com/cli/install
 
