@@ -195,4 +195,4 @@ may or may not be available on the users computer.
 
 [unicode]: http://www.unicode.org/Public/emoji/1.0/full-emoji-list.html
 
-[afinn-169]: https://github.com/wooorm/afinn-169
+[afinn-169]: https://github.com/words/afinn-169
