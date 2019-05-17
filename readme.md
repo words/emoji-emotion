@@ -1,4 +1,8 @@
-# emoji-emotion [![Build Status][travis-badge]][travis]
+# emoji-emotion
+
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 List of emoji rated for valence with an integer between minus five
 (negative) and plus five (positive).
@@ -181,9 +185,17 @@ may or may not be available on the users computer.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/words/emoji-emotion.svg
+[build-badge]: https://img.shields.io/travis/words/emoji-emotion.svg
 
-[travis]: https://travis-ci.org/words/emoji-emotion
+[build]: https://travis-ci.org/words/emoji-emotion
+
+[downloads-badge]: https://img.shields.io/npm/dm/emoji-emotion.svg
+
+[downloads]: https://www.npmjs.com/package/emoji-emotion
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/emoji-emotion.svg
+
+[size]: https://bundlephobia.com/result?p=emoji-emotion
 
 [npm]: https://docs.npmjs.com/cli/install
 
