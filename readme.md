@@ -40,7 +40,7 @@ Check out [`gemoji`][gemoji] for more info: tags, descriptions, names, etc.
 
 The included emoji are the faces and cats defined by [Unicode][].
 The polarity was hand classified (by one person) based on the names of these
-emoji (sometimes synonyms) and their [AFINN-169][] values.
+emoji (sometimes synonyms) and their [AFINN-165][] values.
 Special care was given to **not** classify based on the images (as [different
 vendors use different pictograms][checkmoji]), but only on words and how
 they are used.
@@ -207,6 +207,6 @@ may or may not be available on the users computer.
 
 [unicode]: http://www.unicode.org/Public/emoji/1.0/full-emoji-list.html
 
-[afinn-169]: https://github.com/words/afinn-169
+[afinn-165]: https://github.com/words/afinn-165
 
 [checkmoji]: https://wooorm.com/checkmoji/
