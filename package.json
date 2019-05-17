@@ -35,6 +35,7 @@
     "gemoji": "^4.0.0",
     "mdast-zone": "^3.0.0",
     "plain-text-data-to-json": "^1.0.0",
+    "prettier": "^1.17.1",
     "remark-cli": "^6.0.0",
     "remark-preset-wooorm": "^5.0.0",
     "tape": "^4.6.0",
@@ -42,17 +43,24 @@
     "xo": "^0.24.0"
   },
   "scripts": {
-    "build-md": "remark . -qfo",
-    "build-data": "node script/build-data",
+    "generate": "node script/build-data",
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
     "build-bundle": "browserify index.json --bare -s emojiEmotion > emoji-emotion.js",
     "build-mangle": "esmangle emoji-emotion.js > emoji-emotion.min.js",
-    "build": "npm run build-data && npm run build-md && npm run build-bundle && npm run build-mangle",
-    "lint": "xo",
+    "build": "npm run build-bundle && npm run build-mangle",
     "test-api": "node test",
-    "test": "npm run build && npm run lint && npm run test-api"
+    "test": "npm run format && npm run build && npm run test-api"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
   },
   "xo": {
-    "space": true,
+    "prettier": true,
     "esnext": false,
     "ignores": [
       "emoji-emotion.js"

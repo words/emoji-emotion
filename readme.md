@@ -14,9 +14,9 @@ npm install emoji-emotion
 ## Usage
 
 ```javascript
-var emotion = require('emoji-emotion');
+var emotion = require('emoji-emotion')
 
-console.log(emotion.slice(0, 5));
+console.log(emotion.slice(0, 5))
 ```
 
 Yields:
