@@ -31,7 +31,6 @@
   "devDependencies": {
     "alphanum-sort": "^1.0.2",
     "browserify": "^16.0.0",
-    "esmangle": "^1.0.0",
     "gemoji": "^4.0.0",
     "mdast-zone": "^3.0.0",
     "plain-text-data-to-json": "^1.0.0",
@@ -39,14 +38,15 @@
     "remark-cli": "^6.0.0",
     "remark-preset-wooorm": "^5.0.0",
     "tape": "^4.6.0",
+    "tinyify": "^2.5.0",
     "unist-builder": "^1.0.2",
     "xo": "^0.24.0"
   },
   "scripts": {
     "generate": "node script/build-data",
     "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
-    "build-bundle": "browserify index.json --bare -s emojiEmotion > emoji-emotion.js",
-    "build-mangle": "esmangle emoji-emotion.js > emoji-emotion.min.js",
+    "build-bundle": "browserify index.json -s emojiEmotion -o emoji-emotion.js",
+    "build-mangle": "browserify index.json -s emojiEmotion -p tinyify -o emoji-emotion.min.js",
     "build": "npm run build-bundle && npm run build-mangle",
     "test-api": "node test",
     "test": "npm run format && npm run build && npm run test-api"
