@@ -18,9 +18,9 @@
   ],
   "repository": "words/emoji-emotion",
   "bugs": "https://github.com/words/emoji-emotion/issues",
-  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
   "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
     "Christopher Freeley <freeley.c@husky.neu.edu>"
   ],
   "main": "index.json",

@@ -6,9 +6,9 @@
 %%%%%   full-emoji-list.html
 %%%%%
 %%%%% [2]: For information regarding the names emoji's
-%%%%%      often go by: http://emojipedia.org/people/
+%%%%%      often go by: https://emojipedia.org/people/
 %%%%%
-%%%%% [3]: http://emojipedia.org/
+%%%%% [3]: https://emojipedia.org/
 %%%%%
 
 % `smile` receives an AFINN score of `2`.
