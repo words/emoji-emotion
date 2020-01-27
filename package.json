@@ -18,6 +18,10 @@
   ],
   "repository": "words/emoji-emotion",
   "bugs": "https://github.com/words/emoji-emotion/issues",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/wooorm"
+  },
   "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
