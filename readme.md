@@ -4,20 +4,20 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of emoji rated for valence with an integer between minus five
-(negative) and plus five (positive).
+List of emoji rated for valence with an integer between minus five (negative)
+and plus five (positive).
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install emoji-emotion
 ```
 
-## Usage
+## Use
 
-```javascript
+```js
 var emotion = require('emoji-emotion')
 
 console.log(emotion.slice(0, 5))
@@ -42,15 +42,15 @@ The included emoji are the faces and cats defined by [Unicode][].
 The polarity was hand classified (by one person) based on the names of these
 emoji (sometimes synonyms) and their [AFINN-165][] values.
 Special care was given to **not** classify based on the images (as [different
-vendors use different pictograms][checkmoji]), but only on words and how
-they are used.
+vendors use different pictograms][checkmoji]), but only on words and how they
+are used.
 
 Note that some emoji receive arguably confusing polarities, such as
 `stuck_out_tongue_closed_eyes` (`0`), due to being used for both positive and
 negative emotions.
 
-No images are included in this repository: the copyrighted material
-may or may not be available on the users computer.
+No images are included in this repository: the copyrighted material may or may
+not be available on the users computer.
 
 ## Support
 
