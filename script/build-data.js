@@ -1,8 +1,8 @@
 'use strict'
 
 var fs = require('fs')
-var path = require('path')
-var gemoji = require('gemoji').name
+var gemoji = require('gemoji')
+var nameToEmoji = require('gemoji/name-to-emoji')
 var toJSON = require('plain-text-data-to-json')
 
 var faces = toJSON(fs.readFileSync('faces.txt', 'utf8'))
@@ -13,26 +13,26 @@ faces = Object.keys(faces)
   .sort()
   .map(function(name) {
     var num = Number(faces[name])
+    var emoji = nameToEmoji[name]
 
     if (isNaN(num)) {
       console.log('Invalid valence for %s: %s', name, faces[name])
     }
 
-    if (!gemoji[name]) {
+    if (!emoji) {
       console.log('Invalid gemoji %s', name)
     }
 
-    all.push(gemoji[name].emoji)
+    all.push(emoji)
 
     return {
       name: name,
-      emoji: gemoji[name].emoji,
+      emoji: emoji,
       polarity: num
     }
   })
 
-Object.keys(gemoji).forEach(function(name) {
-  var info = gemoji[name]
+gemoji.forEach(function(info) {
   var emoji = info.emoji
 
   if (info.category !== 'people') {
@@ -43,11 +43,11 @@ Object.keys(gemoji).forEach(function(name) {
     return
   }
 
-  if (all.indexOf(emoji) === -1 && unclassified.indexOf(emoji) === -1) {
+  if (!all.includes(emoji) && !unclassified.includes(emoji)) {
     throw new Error(
       'Missing definition for ' + emoji + ' (' + info.description + ')'
     )
   }
 })
 
-fs.writeFileSync(path.join('index.json'), JSON.stringify(faces, null, 2) + '\n')
+fs.writeFileSync('index.json', JSON.stringify(faces, null, 2) + '\n')

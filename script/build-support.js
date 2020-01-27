@@ -3,7 +3,8 @@
 var zone = require('mdast-zone')
 var u = require('unist-builder')
 var sort = require('alphanum-sort/lib/compare')
-var gemoji = require('gemoji').unicode
+var gemoji = require('gemoji')
+var emojiToName = require('gemoji/emoji-to-name')
 var emotion = require('..')
 
 module.exports = support
@@ -27,13 +28,15 @@ function table() {
     .sort(function(a, b) {
       return (
         a.polarity - b.polarity ||
-        sort({}, gemoji[a.emoji].name, gemoji[b.emoji].name)
+        sort({}, emojiToName[a.emoji], emojiToName[b.emoji])
       )
     })
     .map(function(emotion) {
+      var info = gemoji.find(d => d.emoji === emotion.emoji)
+
       return u('tableRow', [
         cell(emotion.emoji),
-        cell(gemoji[emotion.emoji].names.join('; ')),
+        cell(info.names.join('; ')),
         cell(emotion.polarity)
       ])
     })
