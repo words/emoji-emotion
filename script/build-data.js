@@ -11,11 +11,11 @@ var unclassified = ['🤖']
 
 faces = Object.keys(faces)
   .sort()
-  .map(function(name) {
-    var num = Number(faces[name])
+  .map(function (name) {
+    var number = Number(faces[name])
     var emoji = nameToEmoji[name]
 
-    if (isNaN(num)) {
+    if (isNaN(number)) {
       console.log('Invalid valence for %s: %s', name, faces[name])
     }
 
@@ -28,11 +28,11 @@ faces = Object.keys(faces)
     return {
       name: name,
       emoji: emoji,
-      polarity: num
+      polarity: number
     }
   })
 
-gemoji.forEach(function(info) {
+gemoji.forEach(function (info) {
   var emoji = info.emoji
 
   if (info.category !== 'people') {

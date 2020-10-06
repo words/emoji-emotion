@@ -25,14 +25,14 @@ function table() {
   var head = u('tableRow', ['Emoji', 'Name(s)', 'Polarity'].map(cell))
 
   var body = emotion
-    .sort(function(a, b) {
+    .sort(function (a, b) {
       return (
         a.polarity - b.polarity ||
         sort({}, emojiToName[a.emoji], emojiToName[b.emoji])
       )
     })
-    .map(function(emotion) {
-      var info = gemoji.find(d => d.emoji === emotion.emoji)
+    .map(function (emotion) {
+      var info = gemoji.find((d) => d.emoji === emotion.emoji)
 
       return u('tableRow', [
         cell(emotion.emoji),

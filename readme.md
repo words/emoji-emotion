@@ -57,7 +57,7 @@ not be available on the users computer.
 <!--support start-->
 
 | Emoji | Name(s) | Polarity |
-| ----- | ------- | -------- |
+| - | - | - |
 | 👿 | imp | -4 |
 | 🖕 | middle_finger; fu | -4 |
 | 😾 | pouting_cat | -4 |

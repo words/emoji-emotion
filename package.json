@@ -35,16 +35,16 @@
   "devDependencies": {
     "alphanum-sort": "^1.0.0",
     "browserify": "^16.0.0",
-    "gemoji": "^5.0.0",
-    "mdast-zone": "^3.0.0",
+    "gemoji": "^6.0.0",
+    "mdast-zone": "^4.0.0",
     "plain-text-data-to-json": "^1.0.0",
-    "prettier": "^1.0.0",
-    "remark-cli": "^7.0.0",
-    "remark-preset-wooorm": "^6.0.0",
-    "tape": "^4.0.0",
-    "tinyify": "^2.0.0",
+    "prettier": "^2.0.0",
+    "remark-cli": "^8.0.0",
+    "remark-preset-wooorm": "^7.0.0",
+    "tape": "^5.0.0",
+    "tinyify": "^3.0.0",
     "unist-builder": "^2.0.0",
-    "xo": "^0.25.0"
+    "xo": "^0.33.0"
   },
   "scripts": {
     "generate": "node script/build-data",
@@ -66,13 +66,18 @@
   "xo": {
     "prettier": true,
     "esnext": false,
+    "rules": {
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-number-properties": "off",
+      "unicorn/prefer-set-has": "off"
+    },
     "ignores": [
       "emoji-emotion.js"
     ]
   },
   "remarkConfig": {
     "settings": {
-      "paddedTable": false
+      "tablePipeAlign": false
     },
     "plugins": [
       "preset-wooorm",

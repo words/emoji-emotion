@@ -4,11 +4,11 @@ var assert = require('assert')
 var test = require('tape')
 var emojiEmotion = require('.')
 
-test('emoji-emotion', function(t) {
+test('emoji-emotion', function (t) {
   t.ok(Array.isArray(emojiEmotion))
 
-  t.doesNotThrow(function() {
-    emojiEmotion.forEach(function(emotion) {
+  t.doesNotThrow(function () {
+    emojiEmotion.forEach(function (emotion) {
       assert.strictEqual(
         typeof emotion.emoji,
         'string',
@@ -17,8 +17,8 @@ test('emoji-emotion', function(t) {
     })
   }, 'each entry should have an `emoji` string field')
 
-  t.doesNotThrow(function() {
-    emojiEmotion.forEach(function(emotion) {
+  t.doesNotThrow(function () {
+    emojiEmotion.forEach(function (emotion) {
       var label = JSON.stringify(emotion)
 
       assert.strictEqual(typeof emotion.polarity, 'number', 'number: ' + label)
