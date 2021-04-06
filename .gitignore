@@ -1,6 +1,5 @@
 .DS_Store
 *.log
+coverage/
 node_modules/
-emoji-emotion.js
-emoji-emotion.min.js
 yarn.lock

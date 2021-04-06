@@ -1,15 +1,10 @@
-'use strict'
+import zone from 'mdast-zone'
+import u from 'unist-builder'
+import sort from 'alphanum-sort/lib/compare.js'
+import {gemoji, emojiToName} from 'gemoji'
+import {emojiEmotion} from '../index.js'
 
-var zone = require('mdast-zone')
-var u = require('unist-builder')
-var sort = require('alphanum-sort/lib/compare')
-var gemoji = require('gemoji')
-var emojiToName = require('gemoji/emoji-to-name')
-var emotion = require('..')
-
-module.exports = support
-
-function support() {
+export default function buildSupport() {
   return transformer
 }
 
@@ -24,20 +19,20 @@ function replace(start, nodes, end) {
 function table() {
   var head = u('tableRow', [cell('Emoji'), cell('Name(s)'), cell('Polarity')])
 
-  var body = emotion
+  var body = emojiEmotion
     .sort(function (a, b) {
       return (
         a.polarity - b.polarity ||
         sort({}, emojiToName[a.emoji], emojiToName[b.emoji])
       )
     })
-    .map(function (emotion) {
-      var info = gemoji.find((d) => d.emoji === emotion.emoji)
+    .map(function (d) {
+      var info = gemoji.find((g) => g.emoji === d.emoji)
 
       return u('tableRow', [
-        cell(emotion.emoji),
+        cell(d.emoji),
         cell(info.names.join('; ')),
-        cell(emotion.polarity)
+        cell(d.polarity)
       ])
     })
 

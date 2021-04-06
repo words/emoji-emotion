@@ -1,8 +1,6 @@
-'use strict'
-
-var assert = require('assert')
-var test = require('tape')
-var emojiEmotion = require('.')
+import assert from 'assert'
+import test from 'tape'
+import {emojiEmotion} from './index.js'
 
 test('emoji-emotion', function (t) {
   t.ok(Array.isArray(emojiEmotion))
