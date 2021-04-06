@@ -18,6 +18,7 @@ test('emoji-emotion', function (t) {
 
   t.doesNotThrow(function () {
     var index = -1
+    /** @type {string} */
     var label
 
     while (++index < emojiEmotion.length) {

@@ -2,7 +2,9 @@ import fs from 'fs'
 import {gemoji, nameToEmoji} from 'gemoji'
 import {toJson} from 'plain-text-data-to-json'
 
+/** @type {Object.<string, string>} */
 var raw = toJson(fs.readFileSync('faces.txt', 'utf8'))
+/** @type {Array.<string>} */
 var all = []
 var unclassified = new Set(['🤖'])
 
