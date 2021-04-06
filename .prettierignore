@@ -1,2 +1,4 @@
+coverage/
 emoji-emotion.js
 emoji-emotion.min.js
+*.md

@@ -8,28 +8,36 @@ test('emoji-emotion', function (t) {
   t.ok(Array.isArray(emojiEmotion))
 
   t.doesNotThrow(function () {
-    emojiEmotion.forEach(function (emotion) {
+    var index = -1
+    while (++index < emojiEmotion.length) {
       assert.strictEqual(
-        typeof emotion.emoji,
+        typeof emojiEmotion[index].emoji,
         'string',
-        JSON.stringify(emotion)
+        JSON.stringify(emojiEmotion[index])
       )
-    })
+    }
   }, 'each entry should have an `emoji` string field')
 
   t.doesNotThrow(function () {
-    emojiEmotion.forEach(function (emotion) {
-      var label = JSON.stringify(emotion)
+    var index = -1
+    var label
 
-      assert.strictEqual(typeof emotion.polarity, 'number', 'number: ' + label)
+    while (++index < emojiEmotion.length) {
+      label = JSON.stringify(emojiEmotion[index])
+
       assert.strictEqual(
-        Math.round(emotion.polarity),
-        emotion.polarity,
+        typeof emojiEmotion[index].polarity,
+        'number',
+        'number: ' + label
+      )
+      assert.strictEqual(
+        Math.round(emojiEmotion[index].polarity),
+        emojiEmotion[index].polarity,
         'integer: ' + label
       )
-      assert.ok(emotion.polarity >= -5, 'gte -5: ' + label)
-      assert.ok(emotion.polarity <= 5, 'lte 5: ' + label)
-    })
+      assert.ok(emojiEmotion[index].polarity >= -5, 'gte -5: ' + label)
+      assert.ok(emojiEmotion[index].polarity <= 5, 'lte 5: ' + label)
+    }
   }, 'each entry should have an `polarity` integer field')
 
   t.end()

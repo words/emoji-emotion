@@ -22,7 +22,7 @@ function replace(start, nodes, end) {
 }
 
 function table() {
-  var head = u('tableRow', ['Emoji', 'Name(s)', 'Polarity'].map(cell))
+  var head = u('tableRow', [cell('Emoji'), cell('Name(s)'), cell('Polarity')])
 
   var body = emotion
     .sort(function (a, b) {
