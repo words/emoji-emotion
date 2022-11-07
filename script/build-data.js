@@ -54,5 +54,7 @@ while (++index < gemoji.length) {
 
 fs.writeFileSync(
   'index.js',
-  'export const emojiEmotion = ' + JSON.stringify(faces, null, 2) + '\n'
+  '/**\n * @typedef Info\n *    Emoji rated for valence\n * @property {string} name\n *    Name of emoji (according to `wooorm/gemoji`).\n * @property {string} emoji\n *    Unicode emoji.\n * @property {number} polarity\n *    Integer between minus five (negative) and plus five (positive).\n */\n\n/**\n * List of emoji rated for valence.\n *\n * @type {Array<Info>}\n */\nexport const emojiEmotion = ' +
+    JSON.stringify(faces, null, 2) +
+    '\n'
 )

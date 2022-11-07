@@ -1,3 +1,19 @@
+/**
+ * @typedef Info
+ *    Emoji rated for valence
+ * @property {string} name
+ *    Name of emoji (according to `wooorm/gemoji`).
+ * @property {string} emoji
+ *    Unicode emoji.
+ * @property {number} polarity
+ *    Integer between minus five (negative) and plus five (positive).
+ */
+
+/**
+ * List of emoji rated for valence.
+ *
+ * @type {Array<Info>}
+ */
 export const emojiEmotion = [
   {
     name: '100',
