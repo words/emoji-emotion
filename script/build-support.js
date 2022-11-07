@@ -1,5 +1,7 @@
+import assert from 'node:assert/strict'
 import {zone} from 'mdast-zone'
 import {u} from 'unist-builder'
+// @ts-expect-error untyped.
 import sort from 'alphanum-sort/lib/compare.js'
 import {gemoji, emojiToName} from 'gemoji'
 import {emojiEmotion} from '../index.js'
@@ -32,6 +34,7 @@ function table() {
     })
     .map(function (d) {
       const info = gemoji.find((g) => g.emoji === d.emoji)
+      assert(info, 'expected emoji for `' + d.name + '`')
 
       return u('tableRow', [
         cell(d.emoji),

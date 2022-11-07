@@ -2,9 +2,9 @@ import fs from 'node:fs'
 import {gemoji, nameToEmoji} from 'gemoji'
 import {toJson} from 'plain-text-data-to-json'
 
-/** @type {Object.<string, string>} */
+/** @type {Record<string, string>} */
 const raw = toJson(fs.readFileSync('faces.txt', 'utf8'))
-/** @type {Array.<string>} */
+/** @type {Array<string>} */
 const all = []
 const unclassified = new Set(['🤖'])
 

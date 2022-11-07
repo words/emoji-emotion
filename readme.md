@@ -47,7 +47,7 @@ There is no default export.
 
 ### `emojiEmotion`
 
-`Array.<Info>`, where each object has `name` (`string`), `emoji` (`string`), and
+`Array<Info>`, where each object has `name` (`string`), `emoji` (`string`), and
 `polarity` (`number`).
 
 ## Data
