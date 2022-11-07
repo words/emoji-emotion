@@ -5,18 +5,57 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of emoji rated for valence with an integer between minus five (negative)
-and plus five (positive).
+List of emoji rated for valence.
+
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`emojiEmotion`](#emojiemotion)
+*   [Data](#data)
+*   [Support](#support)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [Security](#security)
+*   [License](#license)
+
+## What is this?
+
+This is a list of unicode emoji rated for [valence][valence-wiki] (“goodness”
+vs “badness”).
+
+## When should I use this?
+
+This package can be used for sentiment analysis of emoji.
+You can use [`afinn-165`][afinn-165] for English words.
+Use [`gemoji`][gemoji] for more info on emoji.
 
 ## Install
 
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install emoji-emotion
+```
+
+In Deno with [`esm.sh`][esmsh]:
+
+```js
+import {emojiEmotion} from 'https://esm.sh/emoji-emotion@3'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import {emojiEmotion} from 'https://esm.sh/emoji-emotion@3?bundle'
+</script>
 ```
 
 ## Use
@@ -37,18 +76,30 @@ Yields:
   { name: 'black_heart', emoji: '🖤', polarity: 3 } ]
 ```
 
-Note the information is intentionally limited.
-Check out [`gemoji`][gemoji] for more info: tags, descriptions, names, etc.
-
 ## API
 
-This package exports the following identifiers: `emojiEmotion`.
+This package exports the identifier `emojiEmotion`.
 There is no default export.
 
 ### `emojiEmotion`
 
-`Array<Info>`, where each object has `name` (`string`), `emoji` (`string`), and
-`polarity` (`number`).
+List of emoji rated for valence (`Array<Info>`).
+
+##### `Info`
+
+Emoji rated for valence.
+
+##### `info.name`
+
+Name of emoji, according to [`gemoji`][gemoji] (`string`).
+
+##### `info.emoji`
+
+Unicode emoji (`string`).
+
+##### `info.polarity`
+
+Integer between minus five (negative) and plus five (positive) (`number`).
 
 ## Data
 
@@ -59,12 +110,9 @@ Special care was given to **not** classify based on the images (as [different
 vendors use different pictograms][checkmoji]), but only on words and how they
 are used.
 
-Note that some emoji receive arguably confusing polarities, such as
+Some emoji receive arguably confusing polarities, such as
 `stuck_out_tongue_closed_eyes` (`0`), due to being used for both positive and
 negative emotions.
-
-No images are included in this repository: the copyrighted material may or may
-not be available on the users computer.
 
 ## Support
 
@@ -193,6 +241,33 @@ not be available on the users computer.
 
 <!--support end-->
 
+## Types
+
+This package is fully typed with [TypeScript][].
+It exports the additional type `Info`.
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 14.14+ and 16.0+.
+It also works in Deno and modern browsers.
+
+## Related
+
+*   [`afinn-165`][afinn-165]
+    — list of English words rated for valence
+*   [`gemoji`][gemoji]
+    — info on gemoji (GitHub Emoji)
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
+
+## Security
+
+This package is safe.
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
@@ -217,14 +292,24 @@ not be available on the users computer.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[esmsh]: https://esm.sh
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
+
 [license]: license
 
 [author]: https://wooorm.com
 
-[gemoji]: https://github.com/wooorm/gemoji
+[unicode]: http://www.unicode.org/emoji/charts/full-emoji-list.html
 
-[unicode]: http://www.unicode.org/Public/emoji/1.0/full-emoji-list.html
+[gemoji]: https://github.com/wooorm/gemoji
 
 [afinn-165]: https://github.com/words/afinn-165
 
 [checkmoji]: https://wooorm.com/checkmoji/
+
+[valence-wiki]: https://en.wikipedia.org/wiki/Valence_\(psychology\)

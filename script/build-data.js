@@ -1,9 +1,9 @@
-import fs from 'node:fs'
+import fs from 'node:fs/promises'
 import {gemoji, nameToEmoji} from 'gemoji'
 import {toJson} from 'plain-text-data-to-json'
 
 /** @type {Record<string, string>} */
-const raw = toJson(fs.readFileSync('faces.txt', 'utf8'))
+const raw = toJson(String(await fs.readFile('faces.txt')))
 /** @type {Array<string>} */
 const all = []
 const unclassified = new Set(['🤖'])
@@ -52,9 +52,9 @@ while (++index < gemoji.length) {
   }
 }
 
-fs.writeFileSync(
+await fs.writeFile(
   'index.js',
-  '/**\n * @typedef Info\n *    Emoji rated for valence\n * @property {string} name\n *    Name of emoji (according to `wooorm/gemoji`).\n * @property {string} emoji\n *    Unicode emoji.\n * @property {number} polarity\n *    Integer between minus five (negative) and plus five (positive).\n */\n\n/**\n * List of emoji rated for valence.\n *\n * @type {Array<Info>}\n */\nexport const emojiEmotion = ' +
+  '/**\n * @typedef Info\n *    Emoji rated for valence.\n * @property {string} name\n *    Name of emoji, according to `wooorm/gemoji`.\n * @property {string} emoji\n *    Unicode emoji.\n * @property {number} polarity\n *    Integer between minus five (negative) and plus five (positive).\n */\n\n/**\n * List of emoji rated for valence.\n *\n * @type {Array<Info>}\n */\nexport const emojiEmotion = ' +
     JSON.stringify(faces, null, 2) +
     '\n'
 )

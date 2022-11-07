@@ -1,8 +1,8 @@
 /**
  * @typedef Info
- *    Emoji rated for valence
+ *    Emoji rated for valence.
  * @property {string} name
- *    Name of emoji (according to `wooorm/gemoji`).
+ *    Name of emoji, according to `wooorm/gemoji`.
  * @property {string} emoji
  *    Unicode emoji.
  * @property {number} polarity

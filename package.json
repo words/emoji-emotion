@@ -1,7 +1,7 @@
 {
   "name": "emoji-emotion",
   "version": "3.0.0",
-  "description": "List of emoji rated for valence in JSON",
+  "description": "List of emoji rated for valence",
   "license": "MIT",
   "keywords": [
     "gemoji",
