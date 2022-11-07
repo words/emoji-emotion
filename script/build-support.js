@@ -1,7 +1,5 @@
-// @ts-ignore remove when typed.
-import zone from 'mdast-zone'
-import u from 'unist-builder'
-// @ts-ignore remove when typed.
+import {zone} from 'mdast-zone'
+import {u} from 'unist-builder'
 import sort from 'alphanum-sort/lib/compare.js'
 import {gemoji, emojiToName} from 'gemoji'
 import {emojiEmotion} from '../index.js'
@@ -14,18 +12,14 @@ export default function buildSupport() {
  * @param {import('mdast').Root} tree
  */
 function transformer(tree) {
-  zone(tree, 'support', replace)
+  zone(tree, 'support', function (start, _, end) {
+    return [start, table(), end]
+  })
 }
 
 /**
- * @param {import('unist').Node} start
- * @param {unknown} _
- * @param {import('unist').Node} end
+ * @returns {import('mdast').Table}
  */
-function replace(start, _, end) {
-  return [start, table(), end]
-}
-
 function table() {
   var head = u('tableRow', [cell('Emoji'), cell('Name(s)'), cell('Polarity')])
 

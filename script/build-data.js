@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'node:fs'
 import {gemoji, nameToEmoji} from 'gemoji'
 import {toJson} from 'plain-text-data-to-json'
 
