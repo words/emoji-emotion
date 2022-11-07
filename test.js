@@ -1,11 +1,11 @@
-import assert from 'node:assert'
-import test from 'tape'
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import {emojiEmotion} from './index.js'
 
-test('emoji-emotion', function (t) {
-  t.ok(Array.isArray(emojiEmotion))
+test('emoji-emotion', function () {
+  assert.ok(Array.isArray(emojiEmotion))
 
-  t.doesNotThrow(function () {
+  assert.doesNotThrow(function () {
     let index = -1
     while (++index < emojiEmotion.length) {
       assert.strictEqual(
@@ -16,7 +16,7 @@ test('emoji-emotion', function (t) {
     }
   }, 'each entry should have an `emoji` string field')
 
-  t.doesNotThrow(function () {
+  assert.doesNotThrow(function () {
     let index = -1
 
     while (++index < emojiEmotion.length) {
@@ -36,6 +36,4 @@ test('emoji-emotion', function (t) {
       assert.ok(emojiEmotion[index].polarity <= 5, 'lte 5: ' + label)
     }
   }, 'each entry should have an `polarity` integer field')
-
-  t.end()
 })
