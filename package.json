@@ -37,6 +37,7 @@
   ],
   "devDependencies": {
     "@types/mdast": "^3.0.0",
+    "@types/node": "^18.0.0",
     "@types/unist": "^2.0.0",
     "alphanum-sort": "^1.0.0",
     "c8": "^7.0.0",
