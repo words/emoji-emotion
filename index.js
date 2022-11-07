@@ -1,4 +1,4 @@
-export var emojiEmotion = [
+export const emojiEmotion = [
   {
     name: '100',
     emoji: '💯',

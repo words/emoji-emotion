@@ -6,7 +6,7 @@ test('emoji-emotion', function (t) {
   t.ok(Array.isArray(emojiEmotion))
 
   t.doesNotThrow(function () {
-    var index = -1
+    let index = -1
     while (++index < emojiEmotion.length) {
       assert.strictEqual(
         typeof emojiEmotion[index].emoji,
@@ -17,12 +17,10 @@ test('emoji-emotion', function (t) {
   }, 'each entry should have an `emoji` string field')
 
   t.doesNotThrow(function () {
-    var index = -1
-    /** @type {string} */
-    var label
+    let index = -1
 
     while (++index < emojiEmotion.length) {
-      label = JSON.stringify(emojiEmotion[index])
+      const label = JSON.stringify(emojiEmotion[index])
 
       assert.strictEqual(
         typeof emojiEmotion[index].polarity,

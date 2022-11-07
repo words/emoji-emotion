@@ -21,9 +21,9 @@ function transformer(tree) {
  * @returns {import('mdast').Table}
  */
 function table() {
-  var head = u('tableRow', [cell('Emoji'), cell('Name(s)'), cell('Polarity')])
+  const head = u('tableRow', [cell('Emoji'), cell('Name(s)'), cell('Polarity')])
 
-  var body = emojiEmotion
+  const body = emojiEmotion
     .sort(function (a, b) {
       return (
         a.polarity - b.polarity ||
@@ -31,7 +31,7 @@ function table() {
       )
     })
     .map(function (d) {
-      var info = gemoji.find((g) => g.emoji === d.emoji)
+      const info = gemoji.find((g) => g.emoji === d.emoji)
 
       return u('tableRow', [
         cell(d.emoji),

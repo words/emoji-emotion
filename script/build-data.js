@@ -3,16 +3,16 @@ import {gemoji, nameToEmoji} from 'gemoji'
 import {toJson} from 'plain-text-data-to-json'
 
 /** @type {Object.<string, string>} */
-var raw = toJson(fs.readFileSync('faces.txt', 'utf8'))
+const raw = toJson(fs.readFileSync('faces.txt', 'utf8'))
 /** @type {Array.<string>} */
-var all = []
-var unclassified = new Set(['🤖'])
+const all = []
+const unclassified = new Set(['🤖'])
 
-var faces = Object.keys(raw)
+const faces = Object.keys(raw)
   .sort()
   .map(function (name) {
-    var polarity = Number(raw[name])
-    var emoji = nameToEmoji[name]
+    const polarity = Number(raw[name])
+    const emoji = nameToEmoji[name]
 
     if (Number.isNaN(polarity)) {
       console.log('Invalid valence for %s: %s', name, raw[name])
@@ -27,7 +27,7 @@ var faces = Object.keys(raw)
     return {name, emoji, polarity}
   })
 
-var index = -1
+let index = -1
 
 while (++index < gemoji.length) {
   if (gemoji[index].category !== 'people') {
@@ -54,5 +54,5 @@ while (++index < gemoji.length) {
 
 fs.writeFileSync(
   'index.js',
-  'export var emojiEmotion = ' + JSON.stringify(faces, null, 2) + '\n'
+  'export const emojiEmotion = ' + JSON.stringify(faces, null, 2) + '\n'
 )
